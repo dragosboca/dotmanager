@@ -1,9 +1,11 @@
+require 'fileutils'
 
-module Dotfiles
+module Dotmanager
   module Util
     extend self
 
-    def abspath(_source)
+    def abspath(source)
+      File.expand_path(source)
     end
   end
 end
